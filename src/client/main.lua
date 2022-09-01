@@ -17,7 +17,7 @@ GET_COORDS = function ()
     local x,y,z = table.unpack(playerCoords);
 
     local VECTOR3_STRING = "vector3(".. round(x,2)..", "..round(y,2)..", "..round(z,2)..")";
-    local VECTOR4_STRING = "vector4(".. round(x,2)..", "..round(y,2)..", "..round(z,2)..round(playerHeading, 2)..")";
+    local VECTOR4_STRING = "vector4(".. round(x,2)..", "..round(y,2)..", "..round(z,2)..", "..round(playerHeading, 2)..")";
     local XYZ_STRING = round(x,2)..", "..round(y,2)..", "..round(z,2);
     local ARRAY_XYZ_STRING = "{x = "..round(x,2)..", y = "..round(y,2)..", z = "..round(z,2).."}";
     local HEADING_STRING = round(playerHeading, 2);

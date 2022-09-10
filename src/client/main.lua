@@ -6,11 +6,12 @@ RegisterNUICallback("exit", function()
     SendNUIMessage({event = "hide"})
 end)
 
+local function round(num, numDecimalPlaces)
+    local mult = 5^(numDecimalPlaces or 0)
+    return math.floor(num * mult + 0.5) / mult
+end
+
 GET_COORDS = function ()
-    local function round(num, numDecimalPlaces)
-        local mult = 5^(numDecimalPlaces or 0)
-        return math.floor(num * mult + 0.5) / mult
-    end
     local playerPed = PlayerPedId();
     local playerCoords = GetEntityCoords(playerPed);
     local playerHeading = GetEntityHeading(playerPed);
